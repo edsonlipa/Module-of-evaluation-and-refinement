@@ -1,10 +1,8 @@
-import './App.css';
 //import MessageForm from './components/MessageForm';
 import Messages from './components/Messages';
-//import 'compo'
 import {ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import {auth} from "./apis/firebase";
 
 function App() {
   return (
@@ -19,7 +17,7 @@ function App() {
           
       <div className="row content ">
         
-      <Messages/>
+      {auth.currentUser?<Messages/>:<h1>you arent logged yet!</h1>}
       
       </div>
 

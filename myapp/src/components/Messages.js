@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import DataTable from "react-data-table-component";
 import { toast } from 'react-toastify';
 
-import { db } from "../firebase";
+import { db } from "../apis/firebase";
 import MessageForm from "./MessageForm";
 //import Mytable from "./mytable";
 
@@ -108,7 +108,7 @@ const Messages =() =>{
     useEffect(()=>{
 
         getData();
-
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[Mtype,toggledClearRows]);
     
 

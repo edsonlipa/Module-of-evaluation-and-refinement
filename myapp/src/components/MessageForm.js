@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { toast } from 'react-toastify';
-import { db } from '../firebase';
+import { db } from '../apis/firebase';
 
 
 const MessageForm = (props) => {

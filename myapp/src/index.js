@@ -1,17 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import Routes from './Routes';
+import Routes from './routes/Routes';
 import reportWebVitals from './reportWebVitals';
-import './firebase'
+import './apis/firebase'
 import 'bootswatch/dist/flatly/bootstrap.min.css'
-
+import './mystyle.css'
 
 ReactDOM.render(
   <React.StrictMode>
-    {//<App />
-    }
-    <Routes/>
+      <Routes/>
   </React.StrictMode>,
   document.getElementById('root')
 );

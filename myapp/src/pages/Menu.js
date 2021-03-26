@@ -1,16 +1,12 @@
-import md5 from 'md5';
-import React, {  useState } from 'react';
-import { db } from "../firebase";
-import Cookies from 'universal-cookie';
-import { ToastContainer,toast } from 'react-toastify';
-
-
-
-const cookies = new Cookies();
+import React from 'react';
+import { ToastContainer} from 'react-toastify';
+//import {useAuthState} from 'react-firebase-hooks/auth'
+import {auth} from "../apis/firebase";
+import NavBar from '../components/navBar';
 
 
 const Menu =()=>{
-  
+    const userName = auth.currentUser.displayName
     const WhenClicked =(e)=>{
         window.location.href='/application'
     }
@@ -18,6 +14,7 @@ const Menu =()=>{
 
     return(
         <>
+        <NavBar/>
         <div className="content jumbotron">
         <div className="container ">
         <div className="row justify-content-center">
@@ -27,7 +24,7 @@ const Menu =()=>{
         <div className="col-md-12">
         <div className="form-block card card-body p-5">
         <div className="mb-4 text-center ">
-        <h3>Bienvenid@ {cookies.get('name')} a <strong>Kusisqa!</strong></h3>
+        <h3>Bienvenid@ {userName} a <strong>Kusisqa!</strong></h3>
         <p className="mb-4"></p>
         </div>
         <form className="form-group">

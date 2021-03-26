@@ -1,10 +1,8 @@
 import md5 from 'md5';
 import React, {  useState } from 'react';
-import { db } from "../firebase";
+import { db } from "../apis/firebase";
 import Cookies from 'universal-cookie';
 import { ToastContainer,toast } from 'react-toastify';
-
-
 
 const cookies = new Cookies();
 
