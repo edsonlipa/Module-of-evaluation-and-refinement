@@ -129,9 +129,7 @@ const Messages =() =>{
             </div>
 
             <div className="card card-body">
-                
                 {
-                    
                     msgsSetSelected.length!==0
                     ?<div className="btn btn-danger" onClick={deleteset}>Eliminar en grupo</div>
                     :null
@@ -147,8 +145,6 @@ const Messages =() =>{
                 clearSelectedRows={toggledClearRows}
                 onRowClicked={click}
                 defaultSortField="order"/>
-                
-                
             </div>
         
         </div>
