@@ -1,13 +1,16 @@
 .profileimg {
-    max-width: 50px;
-    max-height: auto;
-    border-radius: 50%;
-  }
-
-.logoimg {
-max-width: auto;
-max-height: 40px;
-border-radius: 25%;
-
+  max-width: 50px;
+  max-height: auto;
+  border-radius: 50%;
 }
 
+.logoimg {
+  max-width: auto;
+  max-height: 40px;
+  border-radius: 25%;
+}
+html,
+body,
+#root {
+  height: 100%;
+}

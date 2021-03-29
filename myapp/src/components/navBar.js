@@ -4,6 +4,7 @@ import SignOut from './singOut'
 
 const NavBar =()=>{
     //here i'll should get the 'uid' for log or more functions
+    
     const {photoURL}=auth.currentUser
     
     

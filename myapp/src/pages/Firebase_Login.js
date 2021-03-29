@@ -14,14 +14,10 @@ const Login =()=>{
    
     return(
         <>
-        <div className="content jumbotron">
-        <div className="container ">
+        <div className="bg-primary h-100 p-5 ">
+        <div className="container pt-5">
         <div className="row justify-content-center">
-
-        <div className="col-md-6 contents">
-        <div className="row justify-content-center">
-        <div className="col-md-12">
-        <div className="form-block card card-body p-5">
+        <div className="form-block card card-body p-5 col-md-6 col-sm-10">
         <div className="mb-4 text-center ">
         <h3>Bienvenid@ a <strong>Kusisqa!</strong></h3>
         <p className="mb-4"></p>
@@ -45,9 +41,6 @@ const Login =()=>{
             <div  className="btn btn-lg btn-outline-primary btn-block  mb-4 rounded-pill" onClick={signInWithGoogle}><FcGoogle/>  Inicia sesion con Google</div>
 
         </form>
-        </div>
-        </div>
-        </div>
         </div>
         </div>
         </div>

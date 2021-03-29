@@ -1,14 +1,25 @@
 import React from 'react';
 import { ToastContainer} from 'react-toastify';
-//import {useAuthState} from 'react-firebase-hooks/auth'
+import {useAuthState} from 'react-firebase-hooks/auth'
 import {auth} from "../apis/firebase";
 import NavBar from '../components/navBar';
+import Loading from '../components/Loading';
+import { Link } from 'react-router-dom';
+
 
 
 const Menu =()=>{
-    const userName = auth.currentUser.displayName
-    const WhenClicked =(e)=>{
-        window.location.href='/application'
+    const [user, loading,error] = useAuthState(auth);
+    if(!user&&loading){
+        return <Loading/>
+    }
+    if(error){
+        return <h1>Error!</h1>
+    }
+    
+    try {const userName = auth.currentUser.displayName}
+    catch{
+        const userName = "publico"
     }
 
 
@@ -24,12 +35,13 @@ const Menu =()=>{
         <div className="col-md-12">
         <div className="form-block card card-body p-5">
         <div className="mb-4 text-center ">
-        <h3>Bienvenid@ {userName} a <strong>Kusisqa!</strong></h3>
+        <h3>Bienvenid@ a <strong>Kusisqa!</strong></h3>
         <p className="mb-4"></p>
         </div>
         <form className="form-group">
-            <div onClick={WhenClicked} className="btn btn-success btn-lg  btn-block rounded-pill">Mensages Generados Automaticamente</div>
-            <div  className="btn btn-lg text-white btn-block bg-secondary mb-4 rounded-pill">Mensajes Generados por Kusisqa</div>
+            <Link to="/editpage" className="btn btn-success btn-lg  btn-block rounded-pill">Visualizar y Editar Mensajes</Link>
+            <Link to="/ratepage" className="btn btn-success btn-lg  btn-block rounded-pill">Calificar Mensajes</Link>
+            <div  className="btn btn-lg text-white btn-block bg-secondary mb-4 rounded-pill">Visualizar Mensajes (Publico)</div>
         </form>
         </div>
         </div>
