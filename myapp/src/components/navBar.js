@@ -5,8 +5,18 @@ import SignOut from './singOut'
 const NavBar =()=>{
     //here i'll should get the 'uid' for log or more functions
     
-    const {photoURL}=auth.currentUser
-    
+    const user=auth.currentUser
+    var username, email, photoURL, uid, emailVerified;
+
+    if (user != null) {
+        username = user.displayName;
+        email = user.email;
+        photoURL = user.photoURL;
+        emailVerified = user.emailVerified;
+        uid = user.uid;  // The user's ID, unique to the Firebase project. Do NOT use
+                         // this value to authenticate with your backend server, if
+                         // you have one. Use User.getToken() instead.
+      }
     
     return (<nav className="navbar navbar-dark bg-primary p-0">
                     
@@ -16,7 +26,7 @@ const NavBar =()=>{
             
                 <div className="form-inline float-right">
                     <SignOut/>
-                    <div className="text-white h5 m-2" >{auth.currentUser.displayName}</div>
+                    <div className="text-white h5 m-2" >{username}</div>
                     <img src={photoURL} alt="profile" className="profileimg mr-4"  />
                     
                 </div>

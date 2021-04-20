@@ -17,11 +17,6 @@ const Menu =()=>{
         return <h1>Error!</h1>
     }
     
-    try {const userName = auth.currentUser.displayName}
-    catch{
-        const userName = "publico"
-    }
-
 
     return(
         <>
@@ -40,7 +35,7 @@ const Menu =()=>{
         </div>
         <form className="form-group">
             <Link to="/editpage" className="btn btn-success btn-lg  btn-block rounded-pill">Visualizar y Editar Mensajes</Link>
-            <Link to="/ratepage" className="btn btn-success btn-lg  btn-block rounded-pill">Calificar Mensajes</Link>
+            <Link to="/ratingpage" className="btn btn-success btn-lg  btn-block rounded-pill">Calificar Mensajes</Link>
             <div  className="btn btn-lg text-white btn-block bg-secondary mb-4 rounded-pill">Visualizar Mensajes (Publico)</div>
         </form>
         </div>
