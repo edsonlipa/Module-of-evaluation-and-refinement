@@ -6,14 +6,14 @@ const NavBar =()=>{
     //here i'll should get the 'uid' for log or more functions
     
     const user=auth.currentUser
-    var username, email, photoURL, uid, emailVerified;
-
+    var username, photoURL;
+    // var  email, uid, emailVerified;
     if (user != null) {
         username = user.displayName;
-        email = user.email;
+        // email = user.email;
         photoURL = user.photoURL;
-        emailVerified = user.emailVerified;
-        uid = user.uid;  // The user's ID, unique to the Firebase project. Do NOT use
+        // emailVerified = user.emailVerified;
+        // uid = user.uid;  // The user's ID, unique to the Firebase project. Do NOT use
                          // this value to authenticate with your backend server, if
                          // you have one. Use User.getToken() instead.
       }

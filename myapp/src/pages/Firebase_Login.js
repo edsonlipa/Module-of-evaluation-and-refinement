@@ -23,6 +23,9 @@ const Login =()=>{
         <p className="mb-4"></p>
         </div>
         <form className="form-group">
+            <div  className="btn btn-lg btn-outline-primary btn-block  mb-4 rounded-pill" onClick={signInWithGoogle}><FcGoogle size='25'/>  Inicia sesion con Google</div>
+            <span className="d-block text-center my-4 text-muted"> o </span>
+            
             <div className="form-group first">
             <label >Usuario</label>
                 <input type="text" className="form-control" name="username" />
@@ -37,8 +40,6 @@ const Login =()=>{
             </div>
             <div  className="btn btn-success btn-lg  btn-block rounded-pill">Iniciar Sesion</div>
             <div  className="btn btn-lg text-white btn-block bg-secondary mb-4 rounded-pill">Registrate Aqui!</div>
-            <span className="d-block text-center my-4 text-muted"> o </span>
-            <div  className="btn btn-lg btn-outline-primary btn-block  mb-4 rounded-pill" onClick={signInWithGoogle}><FcGoogle/>  Inicia sesion con Google</div>
 
         </form>
         </div>

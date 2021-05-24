@@ -1,4 +1,4 @@
-input[type="radio"] {
+ input.radio_start[type="radio"] {
   display: none;
 }
 
