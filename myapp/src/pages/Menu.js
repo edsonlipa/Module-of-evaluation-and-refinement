@@ -30,13 +30,13 @@ const Menu =()=>{
         <div className="col-md-12">
         <div className="form-block card card-body p-5">
         <div className="mb-4 text-center ">
-        <h3>Bienvenid@ a <strong>Kusisqa!</strong></h3>
-        <p className="mb-4"></p>
+        <h3>Bienvenid@  <strong></strong></h3>
+        <h6 className="mb-2">puedes escoger una de las siguientes opciones</h6>
         </div>
         <form className="form-group">
-            <Link to="/editpage" className="btn btn-success btn-lg  btn-block rounded-pill">Visualizar y Editar Mensajes</Link>
             <Link to="/ratingpage" className="btn btn-success btn-lg  btn-block rounded-pill">Calificar Mensajes</Link>
-            <div  className="btn btn-lg text-white btn-block bg-secondary mb-4 rounded-pill">Visualizar Mensajes (Publico)</div>
+            <Link to="/editpage" className="btn btn-success btn-lg  btn-block rounded-pill">Visualizar y Editar Mensajes</Link>
+            <div  className="btn btn-lg text-white btn-block bg-secondary mb-4 rounded-pill">Visualizar Mensajes Kusisqa(Publico)</div>
         </form>
         </div>
         </div>

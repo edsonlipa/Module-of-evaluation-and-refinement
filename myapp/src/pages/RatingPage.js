@@ -1,14 +1,11 @@
-// import MessagesList from '../components/MessagesList';
-import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { auth } from "../apis/firebase";
 import NavBar from "../components/navBar";
-import Loading from "../components/Loading";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { db } from "../apis/firebase";
 import MessageSlider from "../components/MessageSlider";
 import { useEffect, useState } from "react";
-import { Alert,Modal,Button } from "react-bootstrap";
+import { Alert,Modal,Button, Card } from "react-bootstrap";
 
 const RatingPage = () => {
   const [user, loading, error] = useAuthState(auth);
@@ -97,6 +94,8 @@ const RatingPage = () => {
         Usted ya ha realizado la calificacion de sus mensages</Alert>
         {((!registred) && (!done)&&user)?<MessageSlider slides={messages} setdata={setmessages} email={user.email}/>:null}
         
+
+        {/* ------------------------------Modal information-------------------- */}
         <Modal
           size="lg"
           show={lgShow}
@@ -105,10 +104,52 @@ const RatingPage = () => {
         >
           <Modal.Header closeButton>
             <Modal.Title id="example-modal-sizes-title-lg">
-            Intrucciones
+              Intrucciones
             </Modal.Title>
           </Modal.Header>
-          <Modal.Body>...</Modal.Body>
+          <Modal.Body>
+            
+            
+          <Card
+            className="mb-2 mt-2"
+          >
+            <Card.Body>
+              <Card.Title> Objetivo</Card.Title>
+              <Card.Text>
+                
+              <p>
+              En nuestra investigacion buscamos generar mensages/ texto persuasivo automaticamente 
+              con ayuda de Redes Neuronales mas especificamente (GAN) clasificado en 3 principios de persuasion. 
+            </p>
+              El objetivo de este experimento es la evaluacion de la calidad del texto generado poniendo a prueba
+              la entendibilidad del texto y su clasificacion.
+                
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          <Card
+            bg='success'
+            className="mb-2 mt-2"
+          >
+            <Card.Body>
+              <Card.Title> Principios de persuasion de Cialdini</Card.Title>
+              <Card.Text>
+                  <ul><strong>Commitment</strong> (Compromiso):
+                  "pequenha explicaccion"</ul>
+                  <ul><strong>Liking</strong> (Me gusta):
+                  "pequenha explicaccion"</ul>
+                  <ul><strong>Consistency</strong> (Consistencia):
+                "pequenha explicaccion"</ul>
+                
+                
+                
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="success" onClick={() => setLgShow(false)}>Entendido!</Button>
+          </Modal.Footer>
         </Modal>  
       </div>
       

@@ -142,19 +142,7 @@ const MessageSlider = (props) => {
         />
           <p className="m-3 d-inline">Enviar Calificaciones</p>
         </Button>
-        {/* <FaArrowAltCircleLeft
-          className="left-arrow d-inline button m-5 hover"
-          onClick={prevSlide}
-          size="50"
-          title="Tooltip on top"
-          data-placement="top"
-          
-        />
-        <FaArrowAltCircleRight
-          className="right-arrow d-inline m-5"
-          onClick={nextSlide}
-          size="50"
-        /> */}
+        
       </div>
       <ToastContainer/>
     </section>
