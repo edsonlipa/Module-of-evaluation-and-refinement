@@ -9,8 +9,6 @@ import { ToastContainer } from 'react-toastify';
 import { db } from "../apis/firebase";
 
 
-
-
 const MessageSlider = (props) => {
   const [current, setcurrent] = useState(0);
   const [answersstars, setanswersstars] = useState({});
@@ -116,7 +114,7 @@ const MessageSlider = (props) => {
       <div >
       
       <Button 
-      className="float-left mt-3"
+      className={current === 0?'d-none':'float-left mt-3'}
       onClick={prevSlide}>
         <FaArrowAltCircleLeft
           size="40"
@@ -126,13 +124,15 @@ const MessageSlider = (props) => {
         
         <Button         
           onClick={nextSlide}
-          className="float-right mt-3">
+          className={current === length - 1?'d-none':'float-right mt-3'}>
             <p className="m-5 d-inline">Siguiente</p>
             <FaArrowAltCircleRight
             size="40"
           />  
         </Button> 
-        <Button 
+        
+      </div>
+      <Button 
         variant='success'
         className="mx-auto d-block mt-3"
         onClick={send_my_form}>
@@ -143,7 +143,6 @@ const MessageSlider = (props) => {
           <p className="m-3 d-inline">Enviar Calificaciones</p>
         </Button>
         
-      </div>
       <ToastContainer/>
     </section>
   );

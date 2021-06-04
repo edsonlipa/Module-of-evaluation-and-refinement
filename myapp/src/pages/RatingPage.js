@@ -104,26 +104,42 @@ const RatingPage = () => {
         >
           <Modal.Header closeButton>
             <Modal.Title id="example-modal-sizes-title-lg">
-              Intrucciones
+              ¡BIENVENIDO!
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            
-            
           <Card
-            className="mb-2 mt-2"
+            className="mb-2 mt-2 "
           >
+            <Card.Header className='h4'>Objetivos</Card.Header>
             <Card.Body>
-              <Card.Title> Objetivo</Card.Title>
-              <Card.Text>
+              <Card.Text className='h4'>
                 
               <p>
               En nuestra investigacion buscamos generar mensages/ texto persuasivo automaticamente 
               con ayuda de Redes Neuronales mas especificamente (GAN) clasificado en 3 principios de persuasion. 
             </p>
+              <p>
               El objetivo de este experimento es la evaluacion de la calidad del texto generado poniendo a prueba
-              la entendibilidad del texto y su clasificacion.
-                
+              la entendibilidad del texto y la correcta asiganacion de su clasificacion.
+            </p>
+            <p> Atraves de este estudio podras participar calificando la inteligibilidad y si clasificacion 
+              teniendo en cuenta 3 principios de persuasion. 
+              </p> 
+              </Card.Text>
+            </Card.Body>
+          </Card>
+          <Card
+            bg='info'
+            className="mb-2 mt-2 "
+          >
+            <Card.Header className='h4'>Contexto del Corpus de Entrenamiento</Card.Header>
+            <Card.Body>
+              <Card.Text className='h4'>
+                  El conjunto de datos que utilizamos para el entrenamiento es una coleccion de trnascripciones de 
+                  de negociacion de rehenes catalogadas en los principios de cialdini.
+                  <br></br>
+                  <small>A Microtext Corpus for Persuasion Detection in Dialog(2011),Young, Joel, et al</small>
               </Card.Text>
             </Card.Body>
           </Card>
@@ -131,18 +147,17 @@ const RatingPage = () => {
             bg='success'
             className="mb-2 mt-2"
           >
+            <Card.Header className='h4'>Principios de Persuasion de Cialdini</Card.Header>
             <Card.Body>
-              <Card.Title> Principios de persuasion de Cialdini</Card.Title>
-              <Card.Text>
-                  <ul><strong>Commitment</strong> (Compromiso):
-                  "pequenha explicaccion"</ul>
-                  <ul><strong>Liking</strong> (Me gusta):
-                  "pequenha explicaccion"</ul>
-                  <ul><strong>Consistency</strong> (Consistencia):
-                "pequenha explicaccion"</ul>
-                
-                
-                
+              <Card.Text className='h4'>
+                  <li><strong>Commitment</strong> (Compromiso):
+                  Las personas tienden a ser coherentes con lo que han dicho, escrito o se han comprometido.</li>
+                  <br></br>
+                  <li><strong>Liking</strong> (Simpatia):
+                  La gente prefiere decir «si» a aquellos por los que tienen simpatía, buena onda o les gustan.</li>
+                  <br></br>
+                  <li><strong>Consistency</strong> (Consistencia):
+                  Las personas tienden a seguir a quienes muestran coherencia en sus palabras o que dominan un tema.</li>
               </Card.Text>
             </Card.Body>
           </Card>
