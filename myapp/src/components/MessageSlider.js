@@ -37,7 +37,7 @@ const MessageSlider = (props) => {
       'Lik':"Liking",
       'Con':"Consistency",
     }
-    if(Object.entries(answersstars).length===15 && Object.entries(answerstype).length===15){
+    if(Object.entries(answersstars).length===6 && Object.entries(answerstype).length===6){
       props.slides.map(async(msg, index)=>{
         let respuestas={
           'email': props.email,
