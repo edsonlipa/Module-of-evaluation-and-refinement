@@ -37,7 +37,7 @@ const MessageSlider = (props) => {
       'Lik':"Liking",
       'Con':"Consistency",
     }
-    if(Object.entries(answersstars).length===6 && Object.entries(answerstype).length===6){
+    if(Object.entries(answersstars).length===15 && Object.entries(answerstype).length===15){
       props.slides.map(async(msg, index)=>{
         let respuestas={
           'email': props.email,
@@ -91,7 +91,7 @@ const MessageSlider = (props) => {
               className={index === current ? "card card-body border-white" : " d-none"}
               key={index}  
             >
-              Mensaje {index + 1}:
+              Message {index + 1}:
               <div className="alert alert-dismissible  alert-light">
                 <h3><em>{msg["message"]}</em></h3>
               </div>
@@ -100,7 +100,7 @@ const MessageSlider = (props) => {
               <Form>
                 <Form.Group as={Row}>
                   <Form.Label column sm={4}>
-                    Mejora el mensaje(Opcional)
+                  If you consider that the message can be clearer, leave us your proposal (Optional)
                   </Form.Label>
                   <Col sm={8}>
                     <Form.Control name="textarea"  onChange={(e)=>{handlechange(e,index)}}  placeholder="Mensaje" />
@@ -119,13 +119,13 @@ const MessageSlider = (props) => {
         <FaArrowAltCircleLeft
           size="40"
         />
-          <p className="m-5 d-inline">Anterior</p>
+          <p className="m-5 d-inline">Previous</p>
         </Button> 
         
         <Button         
           onClick={nextSlide}
           className={current === length - 1?'d-none':'float-right mt-3'}>
-            <p className="m-5 d-inline">Siguiente</p>
+            <p className="m-5 d-inline">Next</p>
             <FaArrowAltCircleRight
             size="40"
           />  
@@ -140,7 +140,7 @@ const MessageSlider = (props) => {
           <FaCloudUploadAlt
           size="40"
         />
-          <p className="m-3 d-inline">Enviar Calificaciones</p>
+          <p className="m-3 d-inline">Submit Ratings</p>
         </Button>
         
       <ToastContainer/>

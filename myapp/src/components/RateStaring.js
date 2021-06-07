@@ -17,7 +17,7 @@ const RateStaring = (props) => {
       <Form >
         <Form.Group as={Row}>
           <Form.Label column sm={4}>
-          Califica del 0 al 5, 0 si no se entiende el mensaje o 5 si el mensaje se entiende en su totalidad.
+          Rate from 0 to 5 the clarity of the message, 0 if you do not understand the message and 5 if the message is fully understood.
           </Form.Label>
           <Col sm={8}>
           {[...Array(5)].map((star, index) => {

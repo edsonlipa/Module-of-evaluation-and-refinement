@@ -86,12 +86,12 @@ const RatingPage = () => {
           <strong>Instruciones!</strong> Aqui den ir las intrucciones y una
           breve explicacion de las metricas a usar
         </div> */}
-        <Button variant='info' className='mb-2' onClick={() => setLgShow(true)}>Intrucciones</Button>
+        <Button variant='info' className='mb-2' onClick={() => setLgShow(true)}>Information</Button>
         
         <Alert variant='danger' show={registred}>
         {registred}</Alert>
         <Alert variant='success' show={done}>
-        Usted ya ha realizado la calificacion de sus mensages</Alert>
+        Thank you for your cooperation, your rating has been sent</Alert>
         {((!registred) && (!done)&&user)?<MessageSlider slides={messages} setdata={setmessages} email={user.email}/>:null}
         
 
@@ -104,27 +104,25 @@ const RatingPage = () => {
         >
           <Modal.Header closeButton>
             <Modal.Title id="example-modal-sizes-title-lg">
-              ¡BIENVENIDO!
+              WELCOME!
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
           <Card
             className="mb-2 mt-2 "
           >
-            <Card.Header className='h4'>Objetivos</Card.Header>
+            <Card.Header className='h5'>Goals</Card.Header>
             <Card.Body>
-              <Card.Text className='h4'>
+              <Card.Text className='h5'>
                 
               <p>
-              En nuestra investigacion buscamos generar mensages/ texto persuasivo automaticamente 
-              con ayuda de Redes Neuronales mas especificamente (GAN) clasificado en 3 principios de persuasion. 
-            </p>
+              In our research we seek to generate messages / persuasive text automatically with the help of Neural Networks more specifically (GAN) classified in 3 persuasion principles.
+              </p>
               <p>
-              El objetivo de este experimento es la evaluacion de la calidad del texto generado poniendo a prueba
-              la entendibilidad del texto y la correcta asiganacion de su clasificacion.
-            </p>
-            <p> Atraves de este estudio podras participar calificando la inteligibilidad y si clasificacion 
-              teniendo en cuenta 3 principios de persuasion. 
+              The objective of this experiment is the evaluation of the quality of the generated text, testing the understandability of the text and the correct assignment of its classification.
+              </p>
+              <p>
+              Through this study you will be able to participate by rating intelligibility and if classification taking into account 3 principles of persuasion. 
               </p> 
               </Card.Text>
             </Card.Body>
@@ -133,11 +131,10 @@ const RatingPage = () => {
             bg='info'
             className="mb-2 mt-2 "
           >
-            <Card.Header className='h4'>Contexto del Corpus de Entrenamiento</Card.Header>
+            <Card.Header className='h5'>Context of the Training Corpus</Card.Header>
             <Card.Body>
-              <Card.Text className='h4'>
-                  El conjunto de datos que utilizamos para el entrenamiento es una coleccion de trnascripciones de 
-                  de negociacion de rehenes catalogadas en los principios de cialdini.
+              <Card.Text className='h5'>
+              The dataset we use for training is a collection of hostage negotiation transcripts cataloged in the principles of cialdini.
                   <br></br>
                   <small>A Microtext Corpus for Persuasion Detection in Dialog(2011),Young, Joel, et al</small>
               </Card.Text>
@@ -147,23 +144,23 @@ const RatingPage = () => {
             bg='success'
             className="mb-2 mt-2"
           >
-            <Card.Header className='h4'>Principios de Persuasion de Cialdini</Card.Header>
+            <Card.Header className='h5'>Cialdini's Principles of Persuasion</Card.Header>
             <Card.Body>
-              <Card.Text className='h4'>
+              <Card.Text className='h5'>
                   <li><strong>Commitment</strong> (Compromiso):
-                  Las personas tienden a ser coherentes con lo que han dicho, escrito o se han comprometido.</li>
+                  People tend to be consistent in what they have said, written or committed.</li>
                   <br></br>
                   <li><strong>Liking</strong> (Simpatia):
-                  La gente prefiere decir «si» a aquellos por los que tienen simpatía, buena onda o les gustan.</li>
+                  People prefer to say "yes" to those for whom they have sympathy, good vibes or like.</li>
                   <br></br>
                   <li><strong>Consistency</strong> (Consistencia):
-                  Las personas tienden a seguir a quienes muestran coherencia en sus palabras o que dominan un tema.</li>
+                  People tend to follow those who show consistency in their words or who are proficient in a topic.</li>
               </Card.Text>
             </Card.Body>
           </Card>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="success" onClick={() => setLgShow(false)}>Entendido!</Button>
+            <Button variant="success" onClick={() => setLgShow(false)}>OK!</Button>
           </Modal.Footer>
         </Modal>  
       </div>

@@ -4,6 +4,7 @@ import Login from './Firebase_Login';
 import Menu from './Menu';
 import {auth} from '../apis/firebase'
 import Loading from '../components/Loading';
+import RatingPage from './RatingPage';
 
 
 const Home =()=>{
@@ -13,7 +14,7 @@ const Home =()=>{
     }
 
     return(
-        <>{user?<Menu/>:<Login/>}
+        <>{user?<RatingPage/>:<Login/>}
         </>
     );
 }

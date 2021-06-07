@@ -17,7 +17,7 @@ const RateType = (props) => {
                       
                 <Form.Group as={Row} >
                   <Form.Label as="legend" column sm={4}>
-                    Cual deberia el tipo de persuasion?
+                  Select the type of persuasion you think this message belongs to.
                   </Form.Label>
                   <Col sm={8}>
                     
@@ -51,10 +51,19 @@ const RateType = (props) => {
                     />
                     <Form.Check
                       type="radio"
-                      label="No estoy seguro"
+                      label="Contains no persuasion"
                       name="formHorizontalRadios"
-                      value="no estoy seguro"
-                      checked={select==='no estoy seguro'}
+                      value="Contains no persuasion"
+                      checked={select==="Contains no persuasion"}
+                      onChange={onValueChange}
+                      id="formHorizontalRadios3"
+                    />
+                    <Form.Check
+                      type="radio"
+                      label="I'm not sure"
+                      name="formHorizontalRadios"
+                      value="I'm not sure"
+                      checked={select==="I'm not sure"}
                       onChange={onValueChange}
                       id="formHorizontalRadios3"
                     />
