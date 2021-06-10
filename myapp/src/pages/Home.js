@@ -5,6 +5,7 @@ import Menu from './Menu';
 import {auth} from '../apis/firebase'
 import Loading from '../components/Loading';
 import RatingPage from './RatingPage';
+import Acceptance from './Acceptance';
 
 
 const Home =()=>{
@@ -14,7 +15,7 @@ const Home =()=>{
     }
 
     return(
-        <>{user?<RatingPage/>:<Login/>}
+        <>{user?<Acceptance/>:<Login/>}
         </>
     );
 }
