@@ -147,14 +147,36 @@ const RatingPage = () => {
             <Card.Header className='h5'>Cialdini's Principles of Persuasion</Card.Header>
             <Card.Body>
               <Card.Text className='h5'>
+                <ul>
                   <li><strong>Commitment</strong> (Compromiso):
-                  People tend to be consistent in what they have said, written or committed.</li>
+                  People tend to be consistent in what they have said, written or committed.
+                    
+                    <ol >
+                    <smal>Examples:</smal>
+                    <li>well they arent gonna hurt you if you just come on out</li>
+                    <li>aint nobody gonna get hurt unless they storm this son of a gun and then</li>
+                    </ol>
+                  </li>
                   <br></br>
                   <li><strong>Liking</strong> (Simpatia):
-                  People prefer to say "yes" to those for whom they have sympathy, good vibes or like.</li>
+                  People prefer to say "yes" to those for whom they have sympathy, good vibes or like.
+                    <ol >
+                      <smal>Examples:</smal>
+                      <li>i dont know {"<name>"} honey after this you can talk to your mother all day</li>
+                      <li>i see well thats youre held a pretty important position</li>
+                      </ol>
+                    </li>
                   <br></br>
                   <li><strong>Consistency</strong> (Consistencia):
-                  People tend to follow those who show consistency in their words or who are proficient in a topic.</li>
+                  People tend to follow those who show consistency in their words or who are proficient in a topic.
+                  <ol >
+                      <smal>Examples:</smal>
+                      <li>well you know you dont really hurt yourself you hurt all the people that love you</li>
+                      <li>sure he got the easy way out but you know you hurt people by don it.</li>
+                      </ol>
+                    
+                  </li>
+                </ul>
               </Card.Text>
             </Card.Body>
           </Card>
