@@ -7,6 +7,7 @@ import Home from '../pages/Home';
 import NotFound from '../pages/NotFound';
 import RatePage from '../pages/RatingPage';
 import FeedBack from '../pages/FeedBack';
+import DemogForm from '../pages/DemogForm';
 
 function Routes() {
   return (
@@ -14,6 +15,7 @@ function Routes() {
     <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/ratingpage' component={RatePage} />
+        <Route exact path='/demograph-form' component={DemogForm} />
         <Route exact path='/acceptance' component={Acceptance} />
         <Route exact path='/editpage' component={App} />
         <Route exact path='/feedback' component={FeedBack} />
